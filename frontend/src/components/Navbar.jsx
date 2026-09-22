@@ -1,3 +1,4 @@
+import logo from "../assets/images/logo.png";
 import { useState } from "react";
 
 // Simple top navigation bar with a mobile menu toggle.
@@ -8,7 +9,7 @@ export default function Navbar() {
     <header className="navbar">
       <div className="navbar-inner">
         <a href="#home" className="logo">
-          ✦ Nishriti
+        <img src={logo} alt="Nishriti logo" className="logo-img" />
         </a>
 
         <button className="menu-button" onClick={() => setMenuOpen(!menuOpen)}>
