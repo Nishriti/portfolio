@@ -28,23 +28,7 @@ const services = [
       </svg>
     ),
   },
-  {
-    name: "Brand & Visual Design",
-    description: "Type, colour, and visual language that give a product a personality people remember.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none">
-        <path
-          d="M12 3a9 9 0 100 18c1.2 0 2-.9 2-2 0-.5-.2-1-.5-1.3-.3-.4-.5-.8-.5-1.2 0-.9.7-1.5 1.5-1.5H16a5 5 0 005-5c0-3.9-4-7-9-7z"
-          stroke="#fff"
-          strokeWidth="1.8"
-          strokeLinejoin="round"
-        />
-        <circle cx="7.5" cy="11" r="1.1" fill="#fff" />
-        <circle cx="10.5" cy="7.5" r="1.1" fill="#fff" />
-        <circle cx="15" cy="8" r="1.1" fill="#fff" />
-      </svg>
-    ),
-  },
+  
 ];
 
 export default function Services() {
