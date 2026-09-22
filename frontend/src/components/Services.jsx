@@ -35,7 +35,7 @@ export default function Services() {
   return (
     <section id="services" className="services">
       
-      <h2 className="section-title">Our Services</h2>
+      <h2 className="section-title">Skills</h2>
 
       <div className="services-grid">
         {services.map((service) => (

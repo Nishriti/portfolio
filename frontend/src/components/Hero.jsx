@@ -10,7 +10,7 @@ export default function Hero() {
       <div className="hero-roles">
         <span>Web Developer</span>
         <span>UI/UX Designer</span>
-        <span>Brand Identity</span>
+        
       </div>
     </section>
   );
