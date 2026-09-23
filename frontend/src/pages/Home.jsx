@@ -5,6 +5,7 @@ import SelectedWork from "../components/SelectedWork.jsx";
 import Services from "../components/Services.jsx";
 import Contact from "../components/Contact.jsx";
 import Footer from "../components/Footer.jsx";
+import SocialLinks from "../components/SocialLinks.jsx";   // add this import
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <SelectedWork />
         <Services />
         <Contact />
+        <SocialLinks />   {/* add this line */}
       </main>
       <Footer />
     </>
