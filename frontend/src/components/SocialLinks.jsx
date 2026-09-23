@@ -21,11 +21,28 @@ function Icon({ name }) {
   );
 }
 
+const EMAIL = "nishrititamrakar1028@gmail.com";
+
 const LINKS = [
-  { label: "Email", href: "mailto:nishrititamrakar1028@gmail.com" },
+  { label: "Email", href: "mailto:" + EMAIL },
   { label: "GitHub", href: "https://github.com/Nishriti" },
   { label: "LinkedIn", href: "https://linkedin.com/in/nishriti-tamrakar" },
 ];
+
+// On desktop, "mailto:" only works if a mail app is set up, otherwise the
+// browser shows a "choose an app" popup and opens a blank tab.
+// So on desktop we open Gmail's compose window directly in the browser.
+// On phones we keep "mailto:" so it opens the Gmail app.
+function handleEmailClick(e) {
+  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  if (isMobile) return; // let the normal mailto: link work
+  e.preventDefault();
+  window.open(
+    "https://mail.google.com/mail/?view=cm&fs=1&to=" + encodeURIComponent(EMAIL),
+    "_blank",
+    "noopener,noreferrer"
+  );
+}
 
 export default function SocialLinks() {
   return (
@@ -35,7 +52,12 @@ export default function SocialLinks() {
           const isLast = i === LINKS.length - 1;
           return (
             <div className="social-link-item" key={link.label}>
-              <a href={link.href} target="_blank" rel="noreferrer">
+              <a
+                href={link.href}
+                {...(link.label === "Email"
+                  ? { onClick: handleEmailClick }
+                  : { target: "_blank", rel: "noreferrer" })}
+              >
                 <span className={"social-icon social-icon--" + link.label.toLowerCase()}>
                   <Icon name={link.label} />
                 </span>
